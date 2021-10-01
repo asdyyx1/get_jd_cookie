@@ -9,8 +9,8 @@ const partition = String(new Date().getTime())
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1000,
+        height: 650,
         webPreferences: {
             webSecurity: false,
             nodeIntegration: true,
@@ -48,6 +48,6 @@ app.on('window-all-closed', function () {
 
 function getCookie(txt) {
     var CV = txt;
-    var CookieValue = CV.match(/pt_pin=.+?;/) + CV.match(/pt_key=.+?;/);
+    var CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/);
     return CookieValue
 }
